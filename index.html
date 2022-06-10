@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/Foundation CSS/css/foundation.css">
-    <!-- <link rel="stylesheet" href="./assets/css/stylesheet"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> />
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
     <title>Brews Clues</title>
 </head>
@@ -16,9 +16,9 @@
         <div class=" header-img">
             <img src="" alt="beerQs">
         </div>
-        <h1> Brews Clues</h1>
+        <h1 class="has-text-warning"> Brews Clues</h1>
     </header>
-    <div id="triviaHeader" class="trivieMain">
+    <div id="triviaHeader" class="triviaMain">
         <h2>Trivia Categories</h2>
     </div>
     <div class="catContainer" id="categories">
@@ -30,14 +30,25 @@
         <div class="catergory" id="six"></div>
         <div class="catergory" id="seven"></div>
     </div>
-    <div class="Brewery">
-        <input type="input" id="searchBar">
+
+
+    <div class="columns">
+        <div class="column is-full" class="box" class="is-size-1" class="is-size-1-touch"
+            class="is-align-content-center" class="is-flex-direction-row" class="locatorBox">
+            Brewery Locator
+            <div class="columns">
+                <div class="column is-one-fifths" class="box" class="" class=" searchBox">
+                    <input class="input" type="text" placeholder="Brewery Search">
+                </div>
+                <div class="column is-four-fifths" class="box" class="resultsBox">Search Results
+                    <div class="column">result1</div>
+                    <div class="column">result2</div>
+                    <div class="column">result3</div>
+                </div>
+            </div>
+        </div>
 
     </div>
-
-
-
-
 
 </body>
 
