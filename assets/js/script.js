@@ -1,16 +1,26 @@
 // Variables
 const questionEl = document.getElementById('question');
 const optionsEl = document.querySelector('.trivia-options');
-const triviaScoreEl = document.getElementById('trivia-score');
-const totalQuestionEl = document.getElementById('total-question');
 const confirmAnswerBtn = document.getElementById('confirm-answer');
 const playAgainBtn = document.getElementById('play-again');
-const correctAnswerEl = document.getElementById('correct-answer');
+const resultsEl = document.getElementById('results');
+const confirmScoreEl = document.getElementById('confirm-score');
+const totalQuestionEl = document.getElementById('total-question');
 
-let correctAnswer = "", triviaScore = askedCount = 0, totalQuestion = 10;
+let correctAnswer = "", confirmScore = questionCount = 0, totalQuestion = 10;
 
 // Open Trivia DB API
 const triviaAPI = 'https://opentdb.com/api.php?amount=1&difficulty=easy';
+
+
+// Get question from API
+async function getQuestion() {
+    const result = await fetch(triviaAPI);
+    const data = await result.json();
+    resultsEl.innerHTML = '';
+    displayQuestion(data.results[0]);
+};
+
 
 // Event listeners
 let eventListeners = () => {
@@ -18,21 +28,16 @@ let eventListeners = () => {
     playAgainBtn.addEventListener('click', playAgain);
 }
 
-document.addEventListener('click', () => {
+document.addEventListener('DOMContentLoaded', () => {
     getQuestion();
+    eventListeners();
     totalQuestionEl.textContent = totalQuestion;
-    correctAnswerEl.textContent = triviaScore;
+    confirmScoreEl.textContent = confirmScore;
 });
-
-// Get question from API
-async function getQuestion() {
-    const result = await fetch(triviaAPI);
-    const data = await result.json();
-    displayQuestion(data.results[0]);
-};
 
 // Display question and answer options
 let displayQuestion = (data) => {
+    confirmAnswerBtn.disabled = false;
     correctAnswer = data.correct_answer;
     let incorrectAnswer = data.incorrect_answers;
     let answerOptions = incorrectAnswer;
@@ -59,13 +64,65 @@ let chooseAnswer = () => {
             option.classList.add('selected');
         });
     });
+    console.log(correctAnswer);
 }
+
 
 // Confirm answer
 let confirmAnswer = () => {
     confirmAnswerBtn.disabled = true;
     if (optionsEl.querySelector('.selected')) {
         let selectedAnswer = optionsEl.querySelector('.selected span').textContent;
-        console.log(selectedAnswer);
-    };
+
+        if (selectedAnswer == HTMLDecode(correctAnswer)) {
+            confirmScore++;
+            resultsEl.innerHTML = `<p><i class="fas fa-check"></i>Correct Answer!</p>`;
+        } else {
+            resultsEl.innerHTML = `<p><i class="fas fa-times"></i>Incorrect Answer!</p><b>Correct: Answer: </b>${correctAnswer}`;
+        }
+        checkQuestionCount();
+    } else {
+        resultsEl.innerHTML = `<p><i class="fas fa-question"><i/>Please select an option!</p>`;
+        confirmAnswerBtn.disabled = false;
+    }
 };
+
+// to convert html entities into normal text of correct answer if there is any
+let HTMLDecode = (textString) => {
+    let doc = new DOMParser().parseFromString(textString, "text/html");
+    return doc.documentElement.textContent;
+}
+
+let checkQuestionCount = () => {
+    questionCount++;
+    questionLimit();
+    if (questionCount == totalQuestion) {
+        setTimeout(function () {
+            console.log("");
+        }, 5000);
+
+
+        resultsEl.innerHTML += `<p>Your score is ${confirmScore}.</p>`;
+        playAgainBtn.style.display = "block";
+        confirmAnswerBtn.style.display = "none";
+    } else {
+        setTimeout(function () {
+            getQuestion();
+        }, 1000);
+    }
+}
+
+let questionLimit = () => {
+    totalQuestionEl.textContent = totalQuestion;
+    confirmScoreEl.textContent = confirmScore;
+}
+
+let playAgain = () => {
+    confirmScore = questionCount = 0;
+    playAgainBtn.style.display = "none";
+    confirmAnswerBtn.style.display = "block";
+    confirmAnswerBtn.disabled = false;
+    questionLimit();
+    getQuestion();
+}
+
