@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> />
     <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <title>Brews Clues</title>
+    <!-- <title>Brews Clues</title>
 </head>
 
 <body>
@@ -29,14 +29,16 @@
         <div class="catergory" id="five"></div>
         <div class="catergory" id="six"></div>
         <div class="catergory" id="seven"></div>
-    </div>
+    </div> -->
 
 
     <div class="columns" class=" is-size-1-touch">
         <div class="column is-full" class="box">
             <div class="box" class="locatorBox">
-                <div class="has-text-centered" class="is-size-1" class="is-underlined">
-                    Brewery Locator
+                <div class="has-text-centered">
+                    <div class="is-size-1">
+                        Brewery Locator
+                    </div>
                 </div>
             </div>
             <div class="columns">
@@ -45,20 +47,26 @@
                     </div>
                 </div>
                 <div class="box">
-                    <input class="input" class="is-size-2" type="text" placeholder="Brewery Search">
+                    <input class="input" class="addressInput" type="text" placeholder="Enter City Here">
+                    <button class="button" type="submit">Submit</button>
+                    <!-- <input class="button"
+                        class="is-size-4" type="submit" value="Submit input" id="addressInput"
+                        placeholder="Brewery Search"> -->
                 </div>
 
                 <div class="column is-four-fifths">
                     <div class="box" class="resultsBox">
-                        <div class="has-text-centered">Search Results</div>
+                        <div class="has-text-centered">
+                            <div class="is-size-3">Search Results</div>
+                        </div>
                         <div class=" column">
-                            <div class="box">result1</div>
+                            <div class="box" id="result1">result1</div>
                         </div>
                         <div class="column">
-                            <div class="box">result2</div>
+                            <div class="box" id="result2">result2</div>
                         </div>
                         <div class="column">
-                            <div class="box">result3</div>
+                            <div class="box" id="result3">result3</div>
                         </div>
 
                     </div>
@@ -67,7 +75,8 @@
         </div>
 
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-</body>
+    </body>
 
 </html>
