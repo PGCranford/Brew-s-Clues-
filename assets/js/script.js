@@ -1,25 +1,24 @@
-;
+var cityEl = document.querySelector("#addressInput")
 
-//event listeners that need work 
-var button = document.querySelector(".button")
 
-button.addEventListener("click", function () {
+// working function 
+function getApi() {
+    let city = cityEl.value
 
-    // working function 
-    function getApi() {
+    let requestURL = ('https://api.openbrewerydb.org/breweries?by_city=' + city + '&per_page=3')
 
-        let requestURL = 'https://api.openbrewerydb.org/breweries?by_city=atlanta&per_page=3'
+    fetch(requestURL)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+        });
 
-        fetch(requestURL)
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                console.log(data);
-            });
-    }
 
-    getApi();
+}
+
+
 
 
 
