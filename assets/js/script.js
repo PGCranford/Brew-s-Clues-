@@ -1,4 +1,6 @@
 var cityEl = document.querySelector("#addressInput");
+var errorEl = document.querySelector(".warning");
+
 
 // working function 
 function getApi() {
@@ -15,7 +17,10 @@ function getApi() {
             console.log(data);
 
             if (data.length <= 0) {
-                alert("Please Enter a Valid City")
+                var p = document.createElement("p");
+                p.textContent = "Please Enter a Valid City";
+                errorEl.appendChild(p);
+
             }
         })
 }
