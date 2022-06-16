@@ -5,32 +5,131 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-
-    <!-- <title>Brews Clues</title>
+    <title>Brews Clues</title>
+    <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 
 <body>
     <header>
-        <div class=" header-img">
-            <img src="" alt="beerQs">
-        </div>
-        <h1 class="has-text-warning"> Brews Clues</h1>
+        <section class="hero is-small is-info">
+            <div class="hero-body">
+                <p class="title is-size-1">
+                    Brews Clues
+                </p>
+                <p class="subtitle is-size-2">
+                    Trivia & Breweries
+                </p>
+            </div>
+        </section>
     </header>
-    <div id="triviaHeader" class="triviaMain">
-        <h2>Trivia Categories</h2>
+    <div>
+        <h2 class="column is-one-quarter is-size-3">Trivia Categories</h2>
     </div>
-    <div class="catContainer" id="categories">
-        <div class="catergory" id="one"></div>
-        <div class="catergory" id="two"></div>
-        <div class="catergory" id="three"></div>
-        <div class="catergory" id="four"></div>
-        <div class="catergory" id="five"></div>
-        <div class="catergory" id="six"></div>
-        <div class="catergory" id="seven"></div>
-    </div> -->
+    <!-- <div class="container card is-pulled-right"> -->
+    <div class="card-content">
+        <div class="wrapper">
+            <div class="trivia-container">
+                <div class="trivia-head">
+                    <h1 class="trivia-title">Trivia Game</h1>
+                    <div class="trivia-score">
+                        <span id="confirm-score"></span>/<span id="total-question"></span>
+                    </div>
+                </div>
+                <!-- Trivia questions displayed -->
+                <div class="trivia-body">
+                    <h2 class="trivia-question" id="question"></h2>
+                    <ul class="trivia-options">
+                    </ul>
+                    <div id="results">
+                    </div>
+                </div>
+                <!-- Buttons to check if the answer is correct and to play again -->
+                <div class="trivia-buttons">
+                    <button type="button" id="confirm-answer">Confirm Answer</button>
+                    <button type="button" id="play-again">Play Again</button>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="content mr-">
+                Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida
+                at eget metus.
+                Cum sociis natoque penatibus et magnis dis parturient montes,
+                nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
+                Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida
+                at eget metus.
+                Cum sociis natoque penatibus et magnis dis parturient montes,
+                nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
+                Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida
+                at eget metus.
+                Cum sociis natoque penatibus et magnis dis parturient montes,
+                nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
+                Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida
+                at eget metus.
+                Cum sociis natoque penatibus et magnis dis parturient montes,
+                nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
+                Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida
+                at eget metus.
+                Cum sociis natoque penatibus et magnis dis parturient montes,
+                nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
+            </div> -->
+    </div>
+    <!-- </div> -->
+    <div class="column is-one-quarter is-pulled-left">
+        <button onclick="window.location.href='/Film.html'"
+            class="button is-large is-rounded is-primary is-responsive">Film</button>
+        <br>
+        <br>
+        <button onclick="window.location.href='/Music.html'"
+            class="button is-large is-rounded is-link is-responsive">Music</button>
+        <br>
+        <br>
+        <button onclick="window.location.href='/Sports.html'"
+            class="button is-large is-rounded is-info is-responsive">Sports</button>
+        <br>
+        <br>
+        <button onclick="window.location.href='/Television.html'"
+            class="button is-large is-rounded is-success is-responsive">Television</button>
+        <br>
+        <br>
+        <button onclick="window.location.href='/Books.html'"
+            class="button is-large is-rounded is-warning is-responsive">Books</button>
+        <br>
+        <br>
+        <button onclick="window.location.href='/History.html'"
+            class="button is-large is-rounded is-danger is-responsive">History</button>
+    </div>
 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- Brewery HTML -->
 
     <div class="columns" class=" is-size-1-touch">
         <div class="column is-full" class="box">
@@ -54,29 +153,66 @@
                     </div>
                 </div>
 
+
                 <div class="column is-four-fifths">
                     <div class="box" class="resultsBox">
                         <div class="has-text-centered">
                             <div class="is-size-3">Search Results</div>
-                        </div>
-                        <div class=" column">
-                            <div class="box" id="result1">result1</div>
-                        </div>
-                        <div class="column">
-                            <div class="box" id="result2">result2</div>
-                        </div>
-                        <div class="column">
-                            <div class="box" id="result3">result3</div>
-                        </div>
 
+                            <div class=" column">
+                                <div class="box" id="result1">Result 1</div>
+                            </div>
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="content">
+                                        <p class="r1Name">
+                                        <p class="r1Phone">
+                                        <p class="r1Address">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="column">
+                                <div class="box" id="result2">Result 2</div>
+
+                                <div class="card">
+                                    <div class="card-content">
+                                        <div class="content">
+                                            <p class="r2Name">
+                                            <p class="r2Phone">
+                                            <p class="r2Address">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="box" id="result3">Result 3</div>
+                                <div class="card">
+                                    <div class="card-content">
+                                        <div class="content">
+                                            <p class="r3Name">
+                                            <p class="r3Phone">
+                                            <p class="r3Address">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
             </div>
 
+
+
+
         </div>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="./assets/js/script.js"></script>
-        </body>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
 
 </html>
