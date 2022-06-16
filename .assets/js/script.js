@@ -5,6 +5,17 @@ const playAgainBtn = document.getElementById('play-again');
 const resultsEl = document.getElementById('results');
 const confirmScoreEl = document.getElementById('confirm-score');
 const totalQuestionEl = document.getElementById('total-question');
+var cityEl = document.querySelector("#addressInput");
+var errorEl = document.querySelector(".warning");
+var nameOne = document.querySelector(".r1Name");
+var phoneOne = document.querySelector(".r1Phone");
+var addressOne = document.querySelector(".r1Address");
+var nameTwo = document.querySelector(".r2Name");
+var phoneTwo = document.querySelector(".r2Phone");
+var addressTwo = document.querySelector(".r2Address");
+var nameThree = document.querySelector(".r3Name");
+var phoneThree = document.querySelector(".r3Phone");
+var addressThree = document.querySelector(".r3Address");
 
 let correctAnswer = "", confirmScore = questionCount = 0, totalQuestion = 10;
 
@@ -128,19 +139,6 @@ let playAgain = () => {
 
 // Brewery Api Code
 
-var cityEl = document.querySelector("#addressInput");
-var errorEl = document.querySelector(".warning");
-var nameOne = document.querySelector(".r1Name");
-var phoneOne = document.querySelector(".r1Phone");
-var addressOne = document.querySelector(".r1Address");
-var nameTwo = document.querySelector(".r2Name");
-var phoneTwo = document.querySelector(".r2Phone");
-var addressTwo = document.querySelector(".r2Address");
-var nameThree = document.querySelector(".r3Name");
-var phoneThree = document.querySelector(".r3Phone");
-var addressThree = document.querySelector(".r3Address");
-
-
 // working function 
 function getApi() {
     let city = cityEl.value
@@ -153,15 +151,19 @@ function getApi() {
         .then(function (data) {
             console.log(data);
 
+            var firstName = data[0].name;
+            var firstPhone = data[0].phone;
+            var firstAdress = data[0].street;
+
+            nameOne.innerHTML = firstName;
+            phoneOne.innerHTML = firstPhone;
+            addressOne.innerHTML = firstAdress;
+
             if (data.length <= 0) {
                 var p = document.createElement("p");
                 p.textContent = "Please Enter a Valid City";
                 errorEl.appendChild(p);
-
             }
-
-            var firstName = data.body[0].name;
-            r1Name.innerHTML = firstName;
 
         })
 }
