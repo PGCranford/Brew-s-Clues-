@@ -160,7 +160,7 @@ function getApi() {
 
             var firstName = data[0].name;
             var firstPhone = data[0].phone;
-            var firstAddress = data[0].state;
+            var firstAddress = data[0].street;
 
             nameOne.innerHTML = firstName;
             phoneOne.innerHTML = firstPhone;
@@ -168,7 +168,7 @@ function getApi() {
 
             var secondName = data[1].name;
             var secondPhone = data[1].phone;
-            var secondAddress = data[1].state;
+            var secondAddress = data[1].street;
 
             nameTwo.innerHTML = secondName;
             phoneTwo.innerHTML = secondPhone;
@@ -176,20 +176,21 @@ function getApi() {
 
             var thirdName = data[2].name;
             var thirdPhone = data[2].phone;
-            var thirdAddress = data[2].state;
+            var thirdAddress = data[2].street;
 
             nameThree.innerHTML = thirdName;
             phoneThree.innerHTML = thirdPhone;
             addressThree.innerHTML = thirdAddress;
 
-            if (data.length <= 0) {
-                var p = document.createElement("p");
-                p.textContent = "Please Enter a Valid City";
-                errorEl.appendChild(p);
+            // if (!firstName
+            // ) {
+            //     var p = document.createElement("p");
+            //     p.textContent = "Please Enter a Valid City";
+            //     errorEl.appendChild(p);
 
-            }
-
-
+            // }
 
         })
+
+
 }
