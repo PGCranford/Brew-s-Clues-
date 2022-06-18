@@ -161,18 +161,12 @@ function getApi() {
             userError.textContent = "";
         }, "3000")
 
-        // setInterval(function ()p = "")
-
 
     }
 
     else {
 
-
-
         let requestURL = ('https://api.openbrewerydb.org/breweries?by_city=' + city + '&per_page=3')
-
-
 
         fetch(requestURL)
             .then(function (response) {
@@ -182,44 +176,17 @@ function getApi() {
                 console.log(data)
 
                 for (let i = 0; i < data.length; i++) {
-                    brewOne.innerHTML = data[0].name + data[0].phone + data[0].street
-                    brewTwo.innerHTML = data[1].name + data[1].phone + data[1].street
-                    brewThree.innerHTML = data[2].name + data[2].phone + data[2].street
+                    brewOne.innerHTML = data[0].name + "<br/>" + data[0].phone + "<br/>" + data[0].street
+                    brewTwo.innerHTML = data[1].name + "<br/>" + data[1].phone + "<br/>" + data[1].street
+                    brewThree.innerHTML = data[2].name + "<br/>" + data[2].phone + "<br/>" + data[2].street
 
 
                 }
 
 
-                // var firstName = data[0].name;
-                // var firstPhone = data[0].phone;
-                // var firstAddress = data[0].street;
 
-                // nameOne.innerHTML = firstName;
-                // phoneOne.innerHTML = firstPhone;
-                // addressOne.innerHTML = firstAddress;
-
-                // var secondName = data[1].name;
-                // var secondPhone = data[1].phone;
-                // var secondAddress = data[1].street;
-
-                // nameTwo.innerHTML = secondName;
-                // phoneTwo.innerHTML = secondPhone;
-                // addressTwo.innerHTML = secondAddress;
-
-                // var thirdName = data[2].name;
-                // var thirdPhone = data[2].phone;
-                // var thirdAddress = data[2].street;
-
-                // nameThree.innerHTML = thirdName;
-                // phoneThree.innerHTML = thirdPhone;
-                // addressThree.innerHTML = thirdAddress;
             })
     }
-    // else {
-    //     var p = document.createElement("p");
-    //     p.textContent = "Please Enter a Valid City";
-    //     errorEl.appendChild(p);
-    // }
 
 
 
