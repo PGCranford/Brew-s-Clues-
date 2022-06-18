@@ -1,67 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brews Clues</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="header-img">
-            <img src="" alt="beerQs">
-        </div>
-        <h1> Brews Clues</h1>
-        <nav>
-            <input type="input" id="searchBar">
-        </nav>
+      <div class="header-img">
+        <img src="" alt="beerQs" />
+      </div>
+      <h1>Brews Clues</h1>
+      <nav>
+        <input type="input" id="searchBar" />
+      </nav>
     </header>
     <div id="triviaHeader" class="triviaMain">
-        <h2>Trivia Categories</h2>
+      <h2>Trivia Categories</h2>
     </div>
     <div class="catContainer" id="categories">
-        <div class="catergory" id="one"></div>
-        <div class="catergory" id="two"></div>
-        <div class="catergory" id="three"></div>
-        <div class="catergory" id="four"></div>
-        <div class="catergory" id="five"></div>
-        <div class="catergory" id="six"></div>
-        <div class="catergory" id="seven"></div>
+      <div class="catergory" id="one"></div>
+      <div class="catergory" id="two"></div>
+      <div class="catergory" id="three"></div>
+      <div class="catergory" id="four"></div>
+      <div class="catergory" id="five"></div>
+      <div class="catergory" id="six"></div>
+      <div class="catergory" id="seven"></div>
     </div>
-    <div class="Brewery" id="brewResults">
-
-    </div>
+    <div class="Brewery" id="brewResults"></div>
 
     <!-- Trivai Container Start -->
     <div class="wrapper">
-        <div class="trivia-container">
-            <div class="trivia-head">
-                <h1 class="trivia-title">Trivia Game</h1>
-                <div class="trivia-score">
-                    <span id="confirm-score"></span>/<span id="total-question"></span>
-                </div>
-            </div>
-            <!-- Trivia questions displayed -->
-            <div class="trivia-body">
-                <h2 class="trivia-question" id="question"></h2>
-                <ul class="trivia-options">
-                </ul>
-                <div id="results">
-                </div>
-            </div>
-            <!-- Buttons to check if the answer is correct and to play again -->
-            <div class="trivia-buttons">
-                <button type="button" id="confirm-answer">Confirm Answer</button>
-                <button type="button" id="play-again">Play Again</button>
-            </div>
+      <div class="trivia-container">
+        <div class="trivia-head">
+          <h1 class="trivia-title">Trivia Game</h1>
+          <div class="trivia-score">
+            <span id="confirm-score"></span>/<span id="total-question"></span>
+          </div>
         </div>
+        <!-- Trivia questions displayed -->
+        <div class="trivia-body">
+          <h2 class="trivia-question" id="question"></h2>
+          <ul class="trivia-options"></ul>
+          <div id="results"></div>
+        </div>
+        <!-- Buttons to check if the answer is correct and to play again -->
+        <div class="trivia-buttons">
+          <button type="button" id="confirm-answer">Confirm Answer</button>
+          <button type="button" id="play-again">Play Again</button>
+        </div>
+      </div>
     </div>
     <!-- Trivia Container Ends -->
 
     <!-- JavaScript Link -->
     <script src="./assets/js/script.js"></script>
-</body>
-
+  </body>
 </html>
