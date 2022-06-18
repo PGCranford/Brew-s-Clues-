@@ -45,9 +45,10 @@
                     </div>
                 </div>
                 <!-- Buttons to check if the answer is correct and to play again -->
-                <div class="trivia-buttons">
-                    <button type="button" id="confirm-answer">Confirm Answer</button>
-                    <button type="button" id="play-again">Play Again</button>
+                <div class="buttons" class="trivia-buttons">
+                    <button class="button is-success is-small is-rounded" id="confirm-answer">Confirm Answer</button>
+                    <button id="play-again" class="button is-warning is-small is is-rounded">Play
+                        Again</button>
                 </div>
             </div>
         </div>
@@ -105,7 +106,9 @@
 
                             <button class="button has-background-danger  is-rounded" onclick="getApi()">Submit</button>
 
-                            <div class="warning"></div>
+                            <div class="warning">
+                                <p class="falseCity has-text-danger"></p>
+                            </div>
                         </div>
                     </div>
                 </div>

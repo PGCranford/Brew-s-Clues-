@@ -15,6 +15,8 @@ var addressTwo = document.querySelector(".r2Address")
 var nameThree = document.querySelector(".r3Name")
 var phoneThree = document.querySelector(".r3Phone")
 var addressThree = document.querySelector(".r3Address")
+var userError = document.querySelector(".falseCity")
+
 
 let correctAnswer = "", confirmScore = questionCount = 0, totalQuestion = 10;
 
@@ -146,51 +148,65 @@ var errorEl = document.querySelector(".warning");
 function getApi() {
     let city = cityEl.value
 
+    if (city === "" || undefined) {
 
-    let requestURL = ('https://api.openbrewerydb.org/breweries?by_city=' + city + '&per_page=3')
+        userError.textContent = "Please Enter a Valid City";
+        setTimeout(() => {
+            userError.textContent = "";
+        }, "3000")
 
-    fetch(requestURL)
-        .then(function (response) {
-            return response.json()
-        })
-        .then(function (data) {
-            console.log(data)
-            //console.log(data[0].name);
-
-            //if (data.ok) {
-            var firstName = data[0].name;
-            var firstPhone = data[0].phone;
-            var firstAddress = data[0].street;
-
-            nameOne.innerHTML = firstName;
-            phoneOne.innerHTML = firstPhone;
-            addressOne.innerHTML = firstAddress;
-
-            var a = document.createElement("a");
-            a.text = ("href= http://maps.google.com/?q" + addressOne)
+        // setInterval(function ()p = "")
 
 
-            var secondName = data[1].name;
-            var secondPhone = data[1].phone;
-            var secondAddress = data[1].street;
+    }
 
-            nameTwo.innerHTML = secondName;
-            phoneTwo.innerHTML = secondPhone;
-            addressTwo.innerHTML = secondAddress;
+    else {
 
-            var thirdName = data[2].name;
-            var thirdPhone = data[2].phone;
-            var thirdAddress = data[2].street;
 
-            nameThree.innerHTML = thirdName;
-            phoneThree.innerHTML = thirdPhone;
-            addressThree.innerHTML = thirdAddress;
-        })
+
+        let requestURL = ('https://api.openbrewerydb.org/breweries?by_city=' + city + '&per_page=3')
+
+
+
+        fetch(requestURL)
+            .then(function (response) {
+                return response.json()
+            })
+            .then(function (data) {
+                console.log(data)
+                //console.log(data[0].name);
+
+                var firstName = data[0].name;
+                var firstPhone = data[0].phone;
+                var firstAddress = data[0].street;
+
+                nameOne.innerHTML = firstName;
+                phoneOne.innerHTML = firstPhone;
+                addressOne.innerHTML = firstAddress;
+
+                var secondName = data[1].name;
+                var secondPhone = data[1].phone;
+                var secondAddress = data[1].street;
+
+                nameTwo.innerHTML = secondName;
+                phoneTwo.innerHTML = secondPhone;
+                addressTwo.innerHTML = secondAddress;
+
+                var thirdName = data[2].name;
+                var thirdPhone = data[2].phone;
+                var thirdAddress = data[2].street;
+
+                nameThree.innerHTML = thirdName;
+                phoneThree.innerHTML = thirdPhone;
+                addressThree.innerHTML = thirdAddress;
+            })
+    }
     // else {
     //     var p = document.createElement("p");
     //     p.textContent = "Please Enter a Valid City";
     //     errorEl.appendChild(p);
     // }
+
 
 
 }
