@@ -6,15 +6,7 @@ const resultsEl = document.getElementById('results');
 const confirmScoreEl = document.getElementById('confirm-score');
 const totalQuestionEl = document.getElementById('total-question');
 
-var nameOne = document.querySelector(".r1Name")
-var phoneOne = document.querySelector(".r1Phone")
-var addressOne = document.querySelector(".r1Address")
-var nameTwo = document.querySelector(".r2Name")
-var phoneTwo = document.querySelector(".r2Phone")
-var addressTwo = document.querySelector(".r2Address")
-var nameThree = document.querySelector(".r3Name")
-var phoneThree = document.querySelector(".r3Phone")
-var addressThree = document.querySelector(".r3Address")
+
 var brewOne = document.querySelector(".resultOne")
 var brewTwo = document.querySelector(".resultTwo")
 var brewThree = document.querySelector(".resultThree")
