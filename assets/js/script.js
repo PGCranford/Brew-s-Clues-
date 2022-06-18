@@ -15,6 +15,12 @@ var addressTwo = document.querySelector(".r2Address")
 var nameThree = document.querySelector(".r3Name")
 var phoneThree = document.querySelector(".r3Phone")
 var addressThree = document.querySelector(".r3Address")
+var brewOne = document.querySelector(".resultOne")
+var brewTwo = document.querySelector(".resultTwo")
+var brewThree = document.querySelector(".resultThree")
+
+
+
 var userError = document.querySelector(".falseCity")
 
 
@@ -174,31 +180,39 @@ function getApi() {
             })
             .then(function (data) {
                 console.log(data)
-                //console.log(data[0].name);
 
-                var firstName = data[0].name;
-                var firstPhone = data[0].phone;
-                var firstAddress = data[0].street;
+                for (let i = 0; i < data.length; i++) {
+                    brewOne.innerHTML = data[0].name + data[0].phone + data[0].street
+                    brewTwo.innerHTML = data[1].name + data[1].phone + data[1].street
+                    brewThree.innerHTML = data[2].name + data[2].phone + data[2].street
 
-                nameOne.innerHTML = firstName;
-                phoneOne.innerHTML = firstPhone;
-                addressOne.innerHTML = firstAddress;
 
-                var secondName = data[1].name;
-                var secondPhone = data[1].phone;
-                var secondAddress = data[1].street;
+                }
 
-                nameTwo.innerHTML = secondName;
-                phoneTwo.innerHTML = secondPhone;
-                addressTwo.innerHTML = secondAddress;
 
-                var thirdName = data[2].name;
-                var thirdPhone = data[2].phone;
-                var thirdAddress = data[2].street;
+                // var firstName = data[0].name;
+                // var firstPhone = data[0].phone;
+                // var firstAddress = data[0].street;
 
-                nameThree.innerHTML = thirdName;
-                phoneThree.innerHTML = thirdPhone;
-                addressThree.innerHTML = thirdAddress;
+                // nameOne.innerHTML = firstName;
+                // phoneOne.innerHTML = firstPhone;
+                // addressOne.innerHTML = firstAddress;
+
+                // var secondName = data[1].name;
+                // var secondPhone = data[1].phone;
+                // var secondAddress = data[1].street;
+
+                // nameTwo.innerHTML = secondName;
+                // phoneTwo.innerHTML = secondPhone;
+                // addressTwo.innerHTML = secondAddress;
+
+                // var thirdName = data[2].name;
+                // var thirdPhone = data[2].phone;
+                // var thirdAddress = data[2].street;
+
+                // nameThree.innerHTML = thirdName;
+                // phoneThree.innerHTML = thirdPhone;
+                // addressThree.innerHTML = thirdAddress;
             })
     }
     // else {
