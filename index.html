@@ -51,103 +51,60 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="content mr-">
-                Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida
-                at eget metus.
-                Cum sociis natoque penatibus et magnis dis parturient montes,
-                nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-                Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida
-                at eget metus.
-                Cum sociis natoque penatibus et magnis dis parturient montes,
-                nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-                Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida
-                at eget metus.
-                Cum sociis natoque penatibus et magnis dis parturient montes,
-                nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-                Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida
-                at eget metus.
-                Cum sociis natoque penatibus et magnis dis parturient montes,
-                nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-                Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida
-                at eget metus.
-                Cum sociis natoque penatibus et magnis dis parturient montes,
-                nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-            </div> -->
+
     </div>
     <!-- </div> -->
-    <div class="column is-one-quarter is-pulled-left">
-        <button onclick="window.location.href='/Film.html'"
-            class="button is-large is-rounded is-primary is-responsive">Film</button>
-        <br>
-        <br>
-        <button onclick="window.location.href='/Music.html'"
-            class="button is-large is-rounded is-link is-responsive">Music</button>
-        <br>
-        <br>
-        <button onclick="window.location.href='/Sports.html'"
-            class="button is-large is-rounded is-info is-responsive">Sports</button>
-        <br>
-        <br>
-        <button onclick="window.location.href='/Television.html'"
-            class="button is-large is-rounded is-success is-responsive">Television</button>
-        <br>
-        <br>
-        <button onclick="window.location.href='/Books.html'"
-            class="button is-large is-rounded is-warning is-responsive">Books</button>
-        <br>
-        <br>
-        <button onclick="window.location.href='/History.html'"
-            class="button is-large is-rounded is-danger is-responsive">History</button>
+
+    <div class="columns">
+        <div class="column is-one-fifths">
+            <button onclick="window.location.href='/Film.html'"
+                class="button is-large is-rounded is-primary is-responsive">Film</button>
+        </div>
+        <div class="column is-one-fifths">
+            <button onclick="window.location.href='/Music.html'"
+                class="button is-large is-rounded is-link is-responsive">Music</button>
+        </div>
+        <div class="column is-one-fifths">
+            <button onclick="window.location.href='/Sports.html'"
+                class="button is-large is-rounded is-info is-responsive">Sports</button>
+        </div>
+        <div class="column is-one-fifths">
+            <button onclick="window.location.href='/Television.html'"
+                class="button is-large is-rounded is-success is-responsive">Television</button>
+        </div>
+        <div class="column is-one-fifths">
+            <button onclick="window.location.href='/Books.html'"
+                class="button is-large is-rounded is-warning is-responsive">Books</button>
+        </div>
+        <div class="column is-one-fifths">
+            <button onclick="window.location.href='/History.html'"
+                class="button is-large is-rounded is-danger is-responsive">History</button>
+        </div>
     </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
     <!-- Brewery HTML -->
 
     <div class="columns" class=" is-size-1-touch">
-        <div class="column is-full" class="box">
+        <div class="column is-full " class="box">
             <div class="box" class="locatorBox">
                 <div class="has-text-centered">
-                    <div class="is-size-1">
+                    <div class="is-size-1  has-text-white-ter has-background-info">
                         Brewery Locator
                     </div>
                 </div>
             </div>
-            <div class="columns">
+            <div class=" columns">
                 <div class="box">
-                    <div class="column is-one-fifths" class=" searchBox">
+                    <div class="column is-one-fifths has-background-success" class=" searchBox">
 
 
-                        <div class="box">
-                            <input class="input" id="addressInput" type="text" placeholder="Enter City Here">
-                            <button class="button" onclick="getApi()">Submit</button>
+                        <div class="box has-background-success">
+                            <input class="input has-text-grey" id="addressInput" type="text"
+                                placeholder="Enter City Here">
+
+                            <button class="button has-background-danger  is-rounded" onclick="getApi()">Submit</button>
+
                             <div class="warning"></div>
                         </div>
                     </div>
@@ -157,27 +114,22 @@
                 <div class="column is-four-fifths">
                     <div class="box" class="resultsBox">
                         <div class="has-text-centered">
-                            <div class="is-size-3">Search Results</div>
+                            <div class="is-size-3 has-background-warning">Search Results</div>
 
                             <div class=" column">
-                                <div class="box" id="result1">Result 1</div>
-                            </div>
-                            <div class="card">
-                                <div class="card-content">
-                                    <div class="content">
-                                        <p class="r1Name">
-                                        <p class="r1Phone">
-                                        <p class="r1Address">
+                                <!-- <div class="box" id="result1">Result 1</div> -->
+
+                                <div class="card">
+                                    <div class="card-content">
+                                        <div class="content">
+                                            <p class="r1Name">
+                                            <p class="r1Phone">
+                                            <p class="r1Address">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-
-
-
                             <div class="column">
-                                <div class="box" id="result2">Result 2</div>
-
                                 <div class="card">
                                     <div class="card-content">
                                         <div class="content">
@@ -189,7 +141,6 @@
                                 </div>
                             </div>
                             <div class="column">
-                                <div class="box" id="result3">Result 3</div>
                                 <div class="card">
                                     <div class="card-content">
                                         <div class="content">
