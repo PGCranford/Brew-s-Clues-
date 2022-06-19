@@ -169,8 +169,6 @@ function getApi() {
           brewOne.innerHTML = data[0].name + "<br/>" + data[0].phone + "<br/>" + data[0].street
           brewTwo.innerHTML = data[1].name + "<br/>" + data[1].phone + "<br/>" + data[1].street
           brewThree.innerHTML = data[2].name + "<br/>" + data[2].phone + "<br/>" + data[2].street
-
-
         }
       })
   }
