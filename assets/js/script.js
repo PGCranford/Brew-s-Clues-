@@ -108,6 +108,7 @@ let checkQuestionCount = () => {
 
 
     resultsEl.innerHTML += `<p class="is-centered columns">Your score is ${confirmScore}!</p>`;
+    storeScore(confirmScore);
     playAgainBtn.style.display = "block";
     confirmAnswerBtn.style.display = "none";
   } else {
